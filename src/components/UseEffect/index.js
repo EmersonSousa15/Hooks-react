@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const UseEffect = () => {
     const [resourceType, setResourceType] = useState();
     const [resources, setResources] = useState(false);
+    const [count, setCount] = useState(0);
 
     const changeResourceType = (resType) => {
         setResourceType(resType);
@@ -24,31 +25,36 @@ const UseEffect = () => {
 
     useEffect(() => {
         
-        //ComponentDidMount
-        console.log("componentDidMount");
+        const timer = setTimeout(() => {
+            console.log(`The button was pressed ${count} times`);
+        }, [2000])
 
         return() => {
-
-            //ComponentWillUnmount
-            console.log("ComponentWillUnmount");
-
-        };
-    }, [])
+            clearTimeout(timer);
+        }
+    }, [count])
 
  return (
-    <div style={{background: '#aaa'}}>
-        <h1>{resourceType || 'Select resource'}</h1>
-        <span>
-            <button onClick={() => changeResourceType('Posts')}>Posts</button>
-            <button onClick={() => changeResourceType('Albums')}>Albums</button>
-            <button onClick={() => changeResourceType('Todos')}>All</button>
-        </span>
-        {resources ? resources.map((item) => {
-            if(item.id <= 5){
-                return <p key={item.id}>{item.title}</p>
-            }
-        }) : " "}
-    </div>
+    <>
+        <div style={{background: '#aaa'}}>
+            <h1>{resourceType || 'Select resource'}</h1>
+            <span>
+                <button onClick={() => changeResourceType('Posts')}>Posts</button>
+                <button onClick={() => changeResourceType('Albums')}>Albums</button>
+                <button onClick={() => changeResourceType('Todos')}>All</button>
+            </span>
+            {resources ? resources.map((item) => {
+                if(item.id <= 5){
+                    return <p key={item.id}>{item.title}</p>
+                }
+            }) : " "}
+        </div>
+        <div style={{background: '#aaa', maxHeight: '200px'}}>
+            <h1>{count}</h1>
+            <button onClick={() => setCount((prevCount) => prevCount + 1)}>Increment</button>
+            <button onClick={() => setCount(0)}>Reset</button>
+        </div>
+    </>
  )
 }
 
