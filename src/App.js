@@ -3,6 +3,7 @@ import UseEffect from './components/UseEffect';
 import UseState from './components/UseState';
 import UseContext from './components/UseContext';
 import UseCallback from './components/useCallback';
+import UseMemo from './components/UseMemo';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <UseEffect/>
       <UseContext/>
       <UseCallback/>
+      <UseMemo/>
     </section>
   );
 }
