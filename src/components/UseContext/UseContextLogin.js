@@ -19,7 +19,7 @@ const UseContextLogin = () => {
     }
 
  return(
-    <div style={{background: '#aaa', maxHeight: '200px'}}>
+    <div className="components--divs limit--size">
         <h1>{auth ? 'Logged' : 'Not logged in'}</h1>
         <FormLogin loginAccount={loginAccount} setDataUser={setDataUser}/>
     </div>

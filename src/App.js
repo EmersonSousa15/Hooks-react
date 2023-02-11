@@ -2,6 +2,7 @@ import './App.css';
 import UseEffect from './components/UseEffect';
 import UseState from './components/UseState';
 import UseContext from './components/UseContext';
+import UseCallback from './components/useCallback';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <UseState/>
       <UseEffect/>
       <UseContext/>
+      <UseCallback/>
     </section>
   );
 }

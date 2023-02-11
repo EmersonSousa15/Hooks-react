@@ -1,4 +1,4 @@
-div {
+.components--divs {
   margin: 1rem;
   display: flex;
   justify-content: center;
@@ -6,6 +6,11 @@ div {
   padding: 1rem 2rem;
   text-align: center;
   border-radius: 2rem;
+  background: #aaa;
+}
+
+.limit--size{
+  max-height: 200px;
 }
 
 button, input{

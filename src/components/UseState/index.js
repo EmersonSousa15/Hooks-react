@@ -27,7 +27,7 @@ const UseState = () => {
     }
 
     return(
-        <div style={{background: theme.backGround, transition: '1s', maxHeight: '200px'}}>
+        <div className="components--divs limit--size" style={{background: theme.backGround, transition: '1s'}}>
             <h1 style={{color: theme.color}}>{count}</h1>
             <button onClick={incrementCount}>To add</button>
             <button onClick={() => changeTheme(setToggle(!toggle))}>changeTheme</button>

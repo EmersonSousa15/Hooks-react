@@ -36,7 +36,7 @@ const UseEffect = () => {
 
  return (
     <>
-        <div style={{background: '#aaa'}}>
+        <div className="components--divs">
             <h1>{resourceType || 'Select resource'}</h1>
             <span>
                 <button onClick={() => changeResourceType('Posts')}>Posts</button>
@@ -49,7 +49,7 @@ const UseEffect = () => {
                 }
             }) : " "}
         </div>
-        <div style={{background: '#aaa', maxHeight: '200px'}}>
+        <div className="components--divs limit--size">
             <h1>{count}</h1>
             <button onClick={() => setCount((prevCount) => prevCount + 1)}>Increment</button>
             <button onClick={() => setCount(0)}>Reset</button>
