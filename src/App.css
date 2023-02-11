@@ -8,6 +8,6 @@ div {
   border-radius: 2rem;
 }
 
-button{
+button, input{
   margin: 5px 0;
 }
