@@ -4,6 +4,7 @@ import UseState from './components/UseState';
 import UseContext from './components/UseContext';
 import UseCallback from './components/useCallback';
 import UseMemo from './components/UseMemo';
+import UseRef from './components/UseRef';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <UseContext/>
       <UseCallback/>
       <UseMemo/>
+      <UseRef/>
     </section>
   );
 }
