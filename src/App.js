@@ -5,6 +5,7 @@ import UseContext from './components/UseContext';
 import UseCallback from './components/useCallback';
 import UseMemo from './components/UseMemo';
 import UseRef from './components/UseRef';
+import UseLayoutEffect from './UseLayoutEffect';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <UseCallback/>
       <UseMemo/>
       <UseRef/>
+      <UseLayoutEffect/>
     </section>
   );
 }
